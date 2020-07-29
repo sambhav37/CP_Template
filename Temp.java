@@ -30,6 +30,18 @@ public class Temp{
             return ans ;
 
         }
+ 
+ public static BigInteger lcm(long a, long b) { 
+        BigInteger s = BigInteger.valueOf(a); 
+        BigInteger s1 = BigInteger.valueOf(b); 
+ 
+        BigInteger mul = s.multiply(s1); 
+        BigInteger gcd = s.gcd(s1); 
+  
+        // calculate lcm using formula: lcm * gcd = x * y 
+        BigInteger lcm = mul.divide(gcd); 
+        return lcm; 
+    } 
 
   }  
 
